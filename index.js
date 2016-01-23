@@ -54,6 +54,10 @@ alexaApp.launch(function(request,response) {
     
 });
 
+app.get('/hello', function(req, res) {
+  res.send('hello');
+});
+
 
 
 // /**
