@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/christinakayastha/alexaTherapy/issues"
   },
-  "homepage": "https://github.com/christinakayastha/alexaTherapy#readme"
+  "homepage": "https://github.com/christinakayastha/alexaTherapy#readme",
+  "dependencies": {
+    "indico.io": "^0.6.0",
+    "underscore": "^1.8.3"
+  }
 }
