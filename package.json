@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,11 +18,6 @@
   },
   "homepage": "https://github.com/christinakayastha/alexaTherapy#readme",
   "dependencies": {
-    "alexa-app": "^2.3.2",
-    "body-parser": "^1.14.2",
-    "ejs": "^2.3.4",
-    "express": "^4.13.4",
-    "pos": "^0.3.0",
-    "underscore": "^1.8.3"
+    "express": "^4.13.4"
   }
 }
