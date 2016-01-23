@@ -36,12 +36,12 @@ indico.apiKey = '1bc005ab5acedb138d371dc703242b4a';
 
 // //our intent that is launched when "Hey Alexa, open Hey Dad" command is made
 // //since our app only has the one function (tell a bad joke), we will just do that when it's launched
-// alexaApp.launch(function(request,response) {
-//     //log our app launch
-//     console.log("App launched"); 
-//     response.say("Welcome");
-//     response.send();
-// });
+alexaApp.launch(function(request,response) {
+    //log our app launch
+    console.log("App launched"); 
+    response.say("Welcome");
+    response.send();
+});
 
 app.get('/hello', function(req, res) {
   res.send('hello');
