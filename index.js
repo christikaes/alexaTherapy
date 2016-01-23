@@ -54,7 +54,7 @@ app.post('/test', function(req, res) {
     var response = {
         "response" : issue
     }
-  res.json(response);
+  res.json(JSON.stringify(response));
 });
 
 // alexa.intent('number',
