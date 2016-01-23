@@ -18,6 +18,8 @@
   "homepage": "https://github.com/christinakayastha/alexaTherapy#readme",
   "dependencies": {
     "indico.io": "^0.6.0",
+    "lwip": "0.0.8",
+    "pos": "^0.3.0",
     "underscore": "^1.8.3"
   }
 }

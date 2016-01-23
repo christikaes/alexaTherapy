@@ -1,3 +1,9 @@
+var _ = require('underscore');
+var pos = require('pos');
+var indico = require("indico.io");
+// indico.apiKey = '1bc005ab5acedb138d371dc703242b4a';
+
+
 /**
  * This sample demonstrates a simple skill built with the Amazon Alexa Skills Kit.
  * The Intent Schema, Custom Slots, and Sample Utterances for this skill, as well as
@@ -136,7 +142,61 @@ function analyzeIssue(issue, callback){
     speechOutput = "Okay, what I hear you saying is: " + issue + "."
     repromptText = "How else are you feeling?";
 
-    callback({}, buildSpeechletResponse("Therapy Response", speechOutput, repromptText, false));
+
+    // var getSentimentResponse =  function(){
+    //     var onSentimentResponse = function(res) { 
+    //         // console.log("Sentiment: " + res);
+    //         speechOutput = res > .5 ? "You sound happy." : "You sound sad.";
+    //         // console.log(response);
+    //         getKeywordsResponse();
+    //     }
+    //     var logError = function(err) { 
+    //         speechOutput = "I didn't understand."
+    //         repromptText = "Could you please rephrase that?";
+    //     }
+
+    //     indico.sentiment(input)
+    //         .then(onSentimentResponse)
+    //         .catch(logError);
+    // }
+
+    // var getKeywordsResponse = function(){
+    //     var tagger = new pos.Tagger();
+
+    //     var onKeywordResponse = function(keywords) {
+    //         var taggedWords = tagger.tag(_.keys(keywords));
+    //         var topics = [];
+
+    //         _.each(taggedWords, function(item) {
+    //             var word = item[0];
+    //             topics.push({
+    //                 word: word,
+    //                 pos: item[1],
+    //                 confidence: keywords[word]
+    //             });
+    //         });
+    //         // console.log(topics);
+    //         var nouns = _.filter(topics, function(topic) {
+    //             return topic.pos === "NN";
+    //         });
+    //         nouns = _.sortBy(nouns, function(noun) {return noun.confidence;});
+
+    //         speechOutput += "Tell me more about the " + nouns[0].word;
+    //         finish();
+    //     }
+
+    //     indico.keywords(input, {version:2})
+    //         .then(onKeywordResponse)
+    //         .catch(logError);
+    // }
+
+    var finish = function (){
+        callback({}, buildSpeechletResponse("Therapy Response", speechOutput, repromptText, false));
+    }
+
+    finish();
+
+    // getSentimentResponse();
 }
 
 // --------------- Helpers that build all of the responses -----------------------
@@ -169,3 +229,4 @@ function buildResponse(sessionAttributes, speechletResponse) {
         response: speechletResponse
     };
 }
+
