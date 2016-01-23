@@ -2,7 +2,7 @@
 var express = require('express');
 
 // //initialize alexa-app
-// var alexa = require('alexa-app');
+var alexa = require('alexa-app');
 
 // //initialize body-parser
 // var bodyParser = require('body-parser');
@@ -18,8 +18,8 @@ app.set('port', (process.env.PORT || 5000));
 
 
 // //create and assign our Alexa App instance to an address on express, in this case https://hey-dad.herokuapp.com/api/hey-dad
-// var alexaApp = new alexa.app('hey-dad');
-// alexaApp.express(app, "/api/");
+var alexaApp = new alexa.app('alexa-therapy');
+alexaApp.express(app, "/api/");
 
 //make sure we're listening on the assigned port
 app.listen(app.get('port'), function() {
