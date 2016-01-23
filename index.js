@@ -3,6 +3,7 @@ var express = require('express');
 
 // //initialize alexa-app
 var alexa = require('alexa-app');
+var alexaApp = new alexa.app('sample');
 
 // //initialize body-parser
 // var bodyParser = require('body-parser');
@@ -47,20 +48,20 @@ app.get('/hello', function(req, res) {
   res.send('hello');
 });
 
-alexa.intent('number',
-  {
-    "slots":{"number":"NUMBER"}
-    ,"utterances":[ "say the number {1-100|number}" ]
-  },
-  function(request,response) {
-    var number = request.slot('number');
-    response.say("You asked for the number "+number);
-  }
-);
+// alexa.intent('number',
+//   {
+//     "slots":{"number":"NUMBER"}
+//     ,"utterances":[ "say the number {1-100|number}" ]
+//   },
+//   function(request,response) {
+//     var number = request.slot('number');
+//     response.say("You asked for the number "+number);
+//   }
+// );
 
 // Manually hook the handler function into express 
 express.post('/alexa-therapy',function(req,res) {
-  alexa.request(req.body)        // connect express to alexa-app 
+  alexaApp.request(req.body)        // connect express to alexa-app 
     .then(function(response) { // alexa-app returns a promise with the response 
       res.json(response);      // stream it to express' output 
     });
