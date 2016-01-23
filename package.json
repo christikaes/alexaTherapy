@@ -1,0 +1,19 @@
+{
+  "name": "hacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christinakayastha/alexaTherapy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christinakayastha/alexaTherapy/issues"
+  },
+  "homepage": "https://github.com/christinakayastha/alexaTherapy#readme"
+}
