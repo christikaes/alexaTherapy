@@ -48,6 +48,11 @@ app.get('/hello', function(req, res) {
   res.send('hello');
 });
 
+app.post('/test', function(req, res) {
+    console.log(req.body)
+  res.send('test');
+});
+
 // alexa.intent('number',
 //   {
 //     "slots":{"number":"NUMBER"}
