@@ -47,7 +47,7 @@ app.get('/hello', function(req, res) {
   res.send('hello');
 });
 
-app.intent('number',
+alexa.intent('number',
   {
     "slots":{"number":"NUMBER"}
     ,"utterances":[ "say the number {1-100|number}" ]
@@ -60,7 +60,7 @@ app.intent('number',
 
 // Manually hook the handler function into express 
 express.post('/alexa-therapy',function(req,res) {
-  app.request(req.body)        // connect express to alexa-app 
+  alexa.request(req.body)        // connect express to alexa-app 
     .then(function(response) { // alexa-app returns a promise with the response 
       res.json(response);      // stream it to express' output 
     });
