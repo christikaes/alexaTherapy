@@ -3,7 +3,7 @@ var express = require('express');
 
 // //initialize alexa-app
 var alexa = require('alexa-app');
-var alexaApp = new alexa.app('sample');
+var alexaApp = new alexa.app('alexa-therapy');
 
 // //initialize body-parser
 // var bodyParser = require('body-parser');
@@ -48,16 +48,16 @@ app.get('/hello', function(req, res) {
   res.send('hello');
 });
 
-// alexa.intent('number',
-//   {
-//     "slots":{"number":"NUMBER"}
-//     ,"utterances":[ "say the number {1-100|number}" ]
-//   },
-//   function(request,response) {
-//     var number = request.slot('number');
-//     response.say("You asked for the number "+number);
-//   }
-// );
+alexa.intent('number',
+  {
+    "slots":{"number":"NUMBER"}
+    ,"utterances":[ "say the number {1-100|number}" ]
+  },
+  function(request,response) {
+    var number = request.slot('number');
+    response.say("You asked for the number "+number);
+  }
+);
 
 // Manually hook the handler function into express 
 express.post('/alexa-therapy',function(req,res) {
