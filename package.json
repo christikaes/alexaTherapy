@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/christinakayastha/alexaTherapy#readme",
   "dependencies": {
+    "body-parser": "^1.14.2",
     "express": "^4.13.4",
     "indico.io": "^0.6.0",
     "pos": "^0.3.0",
