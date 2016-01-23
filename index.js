@@ -50,7 +50,11 @@ app.get('/hello', function(req, res) {
 
 app.post('/test', function(req, res) {
     // console.log(req.body)
-  res.json(req.body);
+    var issue = req.body.issue;
+    var response = {
+        "response" : issue
+    }
+  res.json(response);
 });
 
 // alexa.intent('number',
